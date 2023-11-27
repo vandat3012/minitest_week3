@@ -7,14 +7,14 @@
 <body>
 <script>
     function calculateFactorial(number){
-        let result = 1;
-        for (let i=1 ; i<=number ; i++){
-            result *= i;
+        if (number === 0 || number === 1){
+            return 1
+        }else{
+            return number*calculateFactorial(number-1)
         }
-        return result;
     }
     let number1 = +prompt("enter your number");
-    alert(`factorial of ${number1} is ${calculateFactorial(number1)}`);
+    document.write(`factorial of ${number1} is ${calculateFactorial(number1)}`)
 </script>
 </body>
 </html>

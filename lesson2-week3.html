@@ -6,23 +6,20 @@
 </head>
 <body>
 <script>
-  function divisibleBy3(n){
-    let count = 0;
-    let number;
-    for (let i=n ;; i++){
-      if (i%3===0){
-        count ++;
-        number = i;
-        document.write(number);
+  function divisibleByNumber(number){
+      let count = 0;
+      let result = [];
+    while (count<15){
+      if (number%3===0){
+          result.push(number);
+          count++;
       }
-      if (count===15){
-        break;
-      }
+        number++;
     }
-
+    return result;
   }
-  let n = +prompt("enter the number");
-  divisibleBy3(n);
+  let number = +prompt("enter the first number");
+  document.write(divisibleByNumber(number));
 </script>
 </body>
 </html>
