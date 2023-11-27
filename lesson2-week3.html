@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function divisibleBy3(n){
+    let count = 0;
+    let number;
+    for (let i=n ;; i++){
+      if (i%3===0){
+        count ++;
+        number = i;
+        document.write(number);
+      }
+      if (count===15){
+        break;
+      }
+    }
+
+  }
+  let n = +prompt("enter the number");
+  divisibleBy3(n);
+</script>
+</body>
+</html>
